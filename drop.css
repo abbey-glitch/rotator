@@ -1,0 +1,308 @@
+*{
+    margin:auto;
+    padding: auto;
+}
+.container{
+    background: gray;
+}
+nav{
+    color:white; 
+    display: inline-flex;
+}
+.menu{
+    display: inline-flex;
+    list-style-type: none;
+}
+.menu li + li{
+    margin:.8em;
+}
+.sub_container{
+    display:block;
+    position: relative;
+    margin: .8em;
+}
+select{
+    display:none;
+    align-content: center;
+}
+.sub_container:hover select{
+    background: grey;
+    color:white;
+    border:none;
+    outline: none;
+    cursor:pointer;
+    display: block;
+    position: absolute;
+}
+/*drop down*/
+.dropbtn{
+    background-color: #4CAF50;
+    color:white;
+    padding: 16px;
+    font-size: 16px;
+    border:none
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+dropdown-content{
+    display:none;
+    position:absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a{
+    color:black;
+    padding:12px 16px;
+    text-decoration: none;
+    display:none;
+}
+.dropdown-content a:hover{
+    background-color: #ddd;
+    display: block;
+    
+
+}
+.dropdown:hover.dropdown-content{
+    display: block;
+}
+.dropdown:hover .dropbtn{
+    background-color: #3e8e41;
+}
+.image{
+    background-color: black;
+    border-radius: 20%;
+    margin-left: 20%;
+    margin-right: 50%;
+    position: absolute;
+    animation: shape 2s linear infinite;
+}
+@keyframes shape{
+    0%{
+        transform: translateX(20%);
+    }
+    20%{
+        transform: translateX(50%);
+    }
+    50%{
+        transform: translateX(60%);
+    }
+    70%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.rotate{
+    background-color: #3e8e41;
+    margin-top: 2rem;
+    height:100vh;
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    padding:.5rem;
+    margin: 2rem 2rem 2rem 2rem;
+    background-color: aliceblue;
+    border-radius: 5rem;
+}
+.rotate> .box:first-child{
+    background-color: blue;
+    margin: 1rem 2rem;
+    animation: bubbles 2s ease-in-out infinite;
+}
+.rotate>.box:nth-child(2){
+    margin: 1rem 4rem;
+    background-color: brown;
+    animation: bubbles 2s linear infinite;
+}
+.rotate>.box:nth-child(3){
+    margin:6rem;
+    background-color:indigo;
+    animation: bubbles 2s linear infinite;
+}
+.rotate>.box:nth-child(4){
+    margin:2rem 8rem;
+    background-color: pink;
+    animation: bubbles 2s linear infinite;
+}
+.rotate>.box:nth-child(5){
+    margin:5rem 10rem;
+    background-color: yellow;
+    animation: bubbles 2s linear infinite;
+}
+.rotate>.box:nth-child(6){
+    margin:8rem 12rem;
+    background-color: black;
+    animation: bubbles 2s linear infinite;
+}
+.rotate>.box:nth-child(7){
+    margin:14rem;
+    background-color: blue;
+    animation: bubbles 2s linear infinite;
+}
+.rotate>.box:last-child{
+    background-color: red;
+    margin:5rem;
+    animation: bubbles 2s ease-in infinite;
+}
+@keyframes bubbles{
+    0%{
+        transform: translateY(10%);
+        padding: .2rem;
+        background-color: aqua;
+        position: absolute;
+        top: 2rem;
+        transition: all 2s linear;
+        transform: scaleX(3.2);
+    }
+    20%{
+        transform:translateY(20%);
+        padding: .3rem;
+        background-color: red;
+        position: absolute;
+        top: 4rem;
+        transform: scaleX(4.2);
+    }
+    40%{
+        transform: translateY(30%);
+        padding: .4rem;
+        position: absolute;
+        top: 8rem;
+        right: 20%;
+        transform: scaleX(3.2);
+    }
+    50%{
+        transform: translateY(40%);
+        padding: .5rem;
+        position: absolute;
+        top: 10rem;
+        right: 30%;
+        transform: scaleX(5.2);
+    }
+    60%{
+        transform: translateY(50%);
+        padding: .6rem;
+        position: absolute;
+        top: 12rem;
+        right: 40%;
+        transform: scaleX(5.5);
+    }
+    80%{
+        transform: translateY(70%);
+        padding: .7rem;
+        position: absolute;
+        top: 14rem;
+        left: 50%;
+        transform: scaleX(6.5);
+    }
+    100%{
+        transform: translateY(0);
+        padding: 2rem;
+        position: absolute;
+        top: 16rem;
+        right: 60%;
+        transition: all 2s ease-in-out;
+    }
+}
+
+
+.drop, .subDrop{
+    list-style-type: none;
+    text-align: center;
+    cursor: pointer;
+}
+.subDrop li{
+    margin-right: 2rem;
+    display: none;
+}
+.drop:hover .subDrop li{
+    display: block;
+    transition: all 2s ease-out;
+    transform: translateY(-20%);
+}
+.disc{
+    background-color: yellow;
+    margin:0;
+    padding: 0 25rem 0 25rem;
+}
+.globe{
+    background-color: yellow;
+    border-radius: 35rem;
+    padding: 2rem;
+}
+.spin{
+    background-color: yellow;
+    border-radius: 60%;
+    padding:12rem;
+    margin: 2rem;
+    position: relative;
+    animation: rotate 2s ease-out infinite;
+    box-shadow: inset 10px 10px 10px 10px;
+}
+.orbit{
+    background-color: black;
+    padding: 2rem;
+    position: absolute;
+    border-radius: 50%;
+    right: -1.5rem;
+    top: 6rem;
+    animation: circle 2s ease-out infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotateZ(90deg);
+    }
+    45%{
+        transform: rotateZ(180deg);
+    }
+    90%{
+        transform: rotateZ(270deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes circle{
+    0%{
+        transition: all 2s ease-in ;
+        margin-top: 25%;
+        transform: translateY(1rem);
+        transform-origin: inherit;
+    }
+    30%{
+        margin-top: 20%;
+        transform: translateY(2rem);
+        transform-origin: inherit;
+    }
+    50%{
+        margin-top: -15%;
+        transform: translateY(3rem);
+        transform-origin: inherit;
+    }
+    80%{
+        margin-top: -10%;
+        transform: translateY(4rem);
+        transform-origin: inherit;
+        transform: translateX(-10rem);
+    }
+    100%{
+        margin-top: -5%;
+        transform: translateY(10rem);
+        transform-origin: inherit;
+        transform: translateX(-15rem);
+    }
+}
+.load{
+    background-color: red;
+    height:20rem;
+    position: relative;
+}
+.loader{
+    background-color:whitesmoke;
+    height:5rem;
+    margin-top: 5rem;
+}
